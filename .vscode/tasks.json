@@ -1,0 +1,20 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "0.1.0",
+  "command": "mono",
+  "isShellCommand": true,
+  "args": ["packages/FAKE/tools/FAKE.exe", "build.fsx"],
+  "showOutput": "always",
+  "tasks": [
+    {
+      "taskName": "test",
+      "args": ["Test"],
+      "isTestCommand": true,
+      "isWatching": false,
+      "problemMatcher": [
+        "$msCompile"
+      ]
+    }
+  ]
+}
