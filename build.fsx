@@ -2,9 +2,10 @@
 #r "./packages/FAKE/tools/FakeLib.dll"
 
 open Fake
+open Fake.Testing.NUnit3
 
 // Directories
-let buildDir  = "./build/"
+let buildDir  = "./bin/"
 let deployDir = "./deploy/"
 
 
@@ -37,11 +38,8 @@ Target "BuildTests" (fun _ ->
 
 Target "Test" (fun _ ->
   !! (buildDir + "/*.Tests.dll")
-    |> NUnit (fun p ->
-      {p with
-        ToolPath = "packages/NUnit.Runners/tools/";
-        DisableShadowCopy = true;
-        OutputFile = buildDir + "TestResults.xml" })
+    |> NUnit3 (fun p ->
+      p)
 )
 
 Target "Deploy" (fun _ ->

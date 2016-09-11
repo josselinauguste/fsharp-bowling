@@ -1,8 +1,5 @@
 source https://www.nuget.org/api/v2
 nuget FAKE
 nuget FSharp.Core
-
-nuget NUnit ~> 2
-nuget NUnit.Runners ~> 2
-
-nuget FsUnit ~> 1
+nuget FsUnit
+nuget NUnit.ConsoleRunner

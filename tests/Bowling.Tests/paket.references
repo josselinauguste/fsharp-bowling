@@ -1,4 +1,4 @@
 FSharp.Core
 NUnit
-NUnit.Runners
+NUnit.ConsoleRunner
 FsUnit
